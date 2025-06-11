@@ -1,0 +1,110 @@
+@import url('https://fonts.googleapis.com/css2?family=Muli&display=swap');
+/* Universal selector*/
+* {
+    box-sizing: border-box;
+}
+
+body {
+    /*Adding Font*/
+    font-family: "Muli", sans-serif;
+    /*Want to center everything*/
+    display: flex;
+    /*aligns everything in the center*/
+    align-items: center;
+    /*Want everything to be in the middle*/
+    justify-content: center;
+    /*height of the body*/
+    height: 100vh;
+    /*getting rid of margin and padding*/
+    Margin: 0;
+    /*dont want scroll bars to be shown by default*/
+    overflow: hidden;
+    background-image: url("nature.jpeg");
+    background-size: cover;
+    backdrop-filter: blur(5px);
+}
+
+
+.container {
+    display: flex;
+    width: 90vw;
+}
+
+.panel{
+    /*preserve rounded corners on large screens*/
+    background-size: cover; 
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 80vh;
+    border-radius: 50px;
+    /*want to make sure that the image is not stretched*/
+    color: #fff;
+    cursor: pointer;
+    flex: 0.5;
+    margin: 10px;
+    position: relative;
+    transition: flex 0.7s ease-in-out;
+}
+
+.panel h3{
+    font-size: 24px;
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    margin: 0;
+    opacity: 0;
+}
+
+.panel.active{
+    flex: 5;
+}
+
+.panel.active h3{
+    opacity: 1;
+    transition: opacity 0.3s ease-in 0.4s;
+}
+
+@media(max-width: 650px){
+    .container {
+        width: 100vw;
+    }
+    .panel:nth-of-type(2){
+    display: none;
+    }
+}
+@media(max-width: 600px){
+    .container {
+        width: 100vw;
+    }
+    .panel:nth-of-type(3){
+    transition: 0.034s ease-in-out;
+    display: none;
+    }
+}
+@media(max-width: 600px){
+    .container {
+        width: 100vw;
+    }
+    .panel:nth-of-type(4){
+    display: none;
+    }
+}
+@media(max-width: 550px){
+        .container {
+            width: 100vw;
+        }
+    .panel:nth-of-type(5){
+    display: none;
+    }
+}
+/* I'm going to redo some of this
+    he did it like this 
+    @media(max-width: 450px){
+        .container {
+            width: 100vw;
+        }
+    .panel:nth-of-type(4){
+    .panel:nth-of-type(5){
+    display: none;
+    }   
+*/
