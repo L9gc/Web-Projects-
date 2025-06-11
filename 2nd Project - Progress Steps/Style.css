@@ -1,0 +1,108 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+/* Universal selector*/
+
+:root{
+    --line-border-fill: rgb(86, 42, 206);
+    --line-border-empty: #e0e0e0;
+}
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: brown;
+    font-family: "Oswald", sans-serif;
+    display: flex;
+    flex-direction: column;
+    /*aligns everything in the center*/
+    align-items: center;
+    /*Want everything to be in the middle*/
+    justify-content: center;
+    /*height of the body*/
+    height: 100vh;
+    /*getting rid of margin and padding*/
+    Margin: 0;
+    /*dont want scroll bars to be shown by default*/
+    overflow: hidden;
+}
+
+.container{
+    text-align: center;
+}
+
+.progress-container {
+    display: flex;
+    justify-content: space-between;
+    position: relative; 
+    margin-bottom: 30px;
+    max-width: 100%;
+    width: 350px;
+    z-index: 1;
+}
+
+.progress-container::before{
+    content: '';
+    background-color: var(--line-border-empty);
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    height: 4px;
+    width: 100%;
+    z-index: -1;
+}
+
+.progress {
+    background-color: var(--line-border-fill);
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    height: 4px;
+    width: 0%;
+    z-index: -1;
+    transition: 0.4s ease;
+}
+
+.circle{ 
+    background-color: white ;
+    color: #999;
+    border-radius : 50%;
+    height: 30px;
+    width: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 3px solid var(--line-border-empty);
+    transition: 0.4s ease;
+}
+
+.circle.active{
+    border-color: var(--line-border-fill);
+    color: rgb(0, 0, 0);
+    border: 3px solid rgb(53, 8, 131);
+}
+
+.btn {
+    background-color: rgb(53, 8, 131);
+    color: rgb(245, 237, 237);
+    border-radius: 6px;
+    font-family: inherit;
+    padding: 8px 30px;
+    margin: 5px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.btn:active {
+    transform: scale(0.98);
+}
+
+.btn:focus {
+    outline: none;
+}
+
+.btn:disabled{
+    background-color: var(--line-border-empty);
+    cursor: not-allowed;
+} 
