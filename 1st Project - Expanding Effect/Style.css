@@ -98,13 +98,5 @@ body {
     }
 }
 /* I'm going to redo some of this
-    he did it like this 
-    @media(max-width: 450px){
-        .container {
-            width: 100vw;
-        }
-    .panel:nth-of-type(4){
-    .panel:nth-of-type(5){
-    display: none;
     }   
 */
