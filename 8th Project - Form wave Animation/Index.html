@@ -11,19 +11,22 @@
         <div class="circle top-right"></div>
         <div class="circle bottom-left"></div>
         <div class="circle bottom-right"></div>
-    </div>
+
     <div class="container">
 
         <h1>Please Login</h1>
         <form>
             <div class="form-control">
                 <input type  = "text" required>
-                <label>Email</label>
-            <div class="form-control">
-                <input type  = "password" required>
-                <label>Password</label>
+                <label for = "email">Email</label>
             </div>
-            <button class="btn">Login</button>
+            <div class="form-control">
+                <input id = "password" type  = "password" required>
+                <label for = "password">Password</label>
+            </div>
+
+            <button type="submit" class="btn">Login</button>
+        </div>
 
             <p class="text">Don't Have an Account?
                 <a href = "#">Register</a> </p>
